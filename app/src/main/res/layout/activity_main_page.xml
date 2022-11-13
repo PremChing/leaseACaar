@@ -1,0 +1,950 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainPageActivity"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:theme="@style/Theme.VehicleRental"
+        app:elevation="0dp"
+        tools:ignore="MissingConstraints">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:popupTheme="@style/Theme.VehicleRental"
+                tools:ignore="MissingConstraints">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="20dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="LeaseACaar"
+                            android:textColor="#000000"
+                            android:textSize="30dp"
+                            android:textStyle="bold" />
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/audi_user_img" />
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="100"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/roundedshape"
+                        android:drawableLeft="@drawable/ic_baseline_search_white"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:textColor="@color/white"
+                        android:hint="Search for Caar!"
+                        android:padding="15dp"
+                        android:textColorHint="@color/white" />
+                </LinearLayout>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/toolbarMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/toolbar"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cars"/>
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="EV-Cars"/>
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Premium"/>
+            </com.google.android.material.tabs.TabLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="480dp"
+            android:orientation="vertical"
+            android:background="@color/black"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <HorizontalScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:scrollbars="none">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:padding="8dp">
+
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="300dp"
+                                        android:layout_height="wrap_content"
+                                        app:cardCornerRadius="4dp"
+                                        app:cardElevation="4dp"
+                                        app:cardUseCompatPadding="true"
+                                        app:contentPadding="16dp">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="8dp"
+                                                android:orientation="horizontal"
+                                                android:weightSum="100">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="90"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:text="BMW X4 Sports"
+                                                    android:textColor="#000000"
+                                                    android:textSize="18sp"
+                                                    android:textStyle="bold" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="10"
+                                                    android:background="@drawable/roundyellow"
+                                                    android:drawableLeft="@drawable/ic_baseline_star"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:padding="6dp"
+                                                    android:gravity="center"
+                                                    android:text="4.5"
+                                                    android:textColor="#ffc32d"
+                                                    android:textSize="14sp"
+                                                    android:textStyle="bold" />
+
+                                            </LinearLayout>
+                                            <ImageView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="160dp"
+                                                android:layout_marginBottom="8dp"
+                                                android:scaleType="fitCenter"
+                                                android:src="@drawable/bmw_car_img" />
+
+                                            <RelativeLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="100">
+
+                                                <TextView
+                                                    android:id="@+id/textView12"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:text="$210"
+                                                    android:textColor="#3f9dff"
+                                                    android:textSize="24sp"
+                                                    android:textStyle="bold" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignEnd="@+id/textView12"
+                                                    android:layout_alignRight="@id/textView12"
+                                                    android:layout_marginEnd="-48dp"
+                                                    android:layout_marginRight="-48dp"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:text="per day"
+                                                    android:textAlignment="center"
+                                                    android:textColor="#8ac3ff"
+                                                    android:textSize="14sp" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentRight="true"
+                                                    android:background="@drawable/roundedshape"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:padding="8dp"
+                                                    android:text="Book Now"
+                                                    android:textColor="#FFFFFF"
+                                                    android:textSize="16sp" />
+
+                                            </RelativeLayout>
+
+                                        </LinearLayout>
+
+                                    </androidx.cardview.widget.CardView>
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="300dp"
+                                        android:layout_height="wrap_content"
+                                        app:cardCornerRadius="4dp"
+                                        app:cardElevation="4dp"
+                                        app:cardUseCompatPadding="true"
+                                        app:contentPadding="16dp">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="8dp"
+                                                android:orientation="horizontal"
+                                                android:weightSum="100">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="90"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:text="BMW X4 Sports"
+                                                    android:textColor="#000000"
+                                                    android:textSize="18sp"
+                                                    android:textStyle="bold" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="10"
+                                                    android:background="@drawable/roundyellow"
+                                                    android:drawableLeft="@drawable/ic_baseline_star"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:padding="6dp"
+                                                    android:text="4.5"
+                                                    android:gravity="center"
+                                                    android:textColor="#ffc32d"
+                                                    android:textSize="14sp"
+                                                    android:textStyle="bold" />
+
+                                            </LinearLayout>
+                                            <ImageView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="160dp"
+                                                android:layout_marginBottom="8dp"
+                                                android:scaleType="fitCenter"
+                                                android:src="@drawable/bmw_car_img" />
+
+                                            <RelativeLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="100">
+
+                                                <TextView
+                                                    android:id="@+id/textView13"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:text="$210"
+                                                    android:textColor="#3f9dff"
+                                                    android:textSize="24sp"
+                                                    android:textStyle="bold" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignEnd="@+id/textView13"
+                                                    android:layout_alignRight="@id/textView13"
+                                                    android:layout_marginEnd="-48dp"
+                                                    android:layout_marginRight="-48dp"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:text="per day"
+                                                    android:textColor="#8ac3ff"
+                                                    android:textSize="14sp" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentRight="true"
+                                                    android:background="@drawable/roundedshape"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:padding="8dp"
+                                                    android:text="Book Now"
+                                                    android:textColor="#FFFFFF"
+                                                    android:textSize="16sp" />
+
+                                            </RelativeLayout>
+
+                                        </LinearLayout>
+
+                                    </androidx.cardview.widget.CardView>
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="300dp"
+                                        android:layout_height="wrap_content"
+                                        app:cardCornerRadius="4dp"
+                                        app:cardElevation="4dp"
+                                        app:cardUseCompatPadding="true"
+                                        app:contentPadding="16dp">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="8dp"
+                                                android:orientation="horizontal"
+                                                android:weightSum="100">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="90"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:text="BMW X4 Sports"
+                                                    android:textColor="#000000"
+                                                    android:textSize="18sp"
+                                                    android:textStyle="bold" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="10"
+                                                    android:background="@drawable/roundyellow"
+                                                    android:drawableLeft="@drawable/ic_baseline_star"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:padding="6dp"
+                                                    android:text="4.5"
+                                                    android:gravity="center"
+                                                    android:textColor="#ffc32d"
+                                                    android:textSize="14sp"
+                                                    android:textStyle="bold" />
+
+                                            </LinearLayout>
+                                            <ImageView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="160dp"
+                                                android:layout_marginBottom="8dp"
+                                                android:scaleType="fitCenter"
+                                                android:src="@drawable/bmw_car_img" />
+
+                                            <RelativeLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="100">
+
+                                                <TextView
+                                                    android:id="@+id/textView14"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:text="$210"
+                                                    android:textColor="#3f9dff"
+                                                    android:textSize="24sp"
+                                                    android:textStyle="bold" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignEnd="@+id/textView14"
+                                                    android:layout_alignRight="@id/textView14"
+                                                    android:layout_marginEnd="-48dp"
+                                                    android:layout_marginRight="-48dp"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:text="per day"
+                                                    android:textColor="#8ac3ff"
+                                                    android:textSize="14sp" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentRight="true"
+                                                    android:background="@drawable/roundedshape"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:padding="8dp"
+                                                    android:text="Book Now"
+                                                    android:textColor="#FFFFFF"
+                                                    android:textSize="16sp" />
+
+                                            </RelativeLayout>
+
+                                        </LinearLayout>
+
+                                    </androidx.cardview.widget.CardView>
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="300dp"
+                                        android:layout_height="wrap_content"
+                                        app:cardCornerRadius="4dp"
+                                        app:cardElevation="4dp"
+                                        app:cardUseCompatPadding="true"
+                                        app:contentPadding="16dp">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="8dp"
+                                                android:orientation="horizontal"
+                                                android:weightSum="100">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="90"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:text="BMW X4 Sports"
+                                                    android:textColor="#000000"
+                                                    android:textSize="18sp"
+                                                    android:textStyle="bold" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="10"
+                                                    android:background="@drawable/roundyellow"
+                                                    android:drawableLeft="@drawable/ic_baseline_star"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:padding="6dp"
+                                                    android:text="4.5"
+                                                    android:gravity="center"
+                                                    android:textColor="#ffc32d"
+                                                    android:textSize="14sp"
+                                                    android:textStyle="bold" />
+
+                                            </LinearLayout>
+                                            <ImageView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="160dp"
+                                                android:layout_marginBottom="8dp"
+                                                android:scaleType="fitCenter"
+                                                android:src="@drawable/bmw_car_img" />
+
+                                            <RelativeLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="100">
+
+                                                <TextView
+                                                    android:id="@+id/textView15"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:text="$210"
+                                                    android:textColor="#3f9dff"
+                                                    android:textSize="24sp"
+                                                    android:textStyle="bold" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignEnd="@+id/textView15"
+                                                    android:layout_alignRight="@id/textView15"
+                                                    android:layout_marginEnd="-48dp"
+                                                    android:layout_marginRight="-48dp"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:text="per day"
+                                                    android:textColor="#8ac3ff"
+                                                    android:textSize="14sp" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentRight="true"
+                                                    android:background="@drawable/roundedshape"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:padding="8dp"
+                                                    android:text="Book Now"
+                                                    android:textColor="#FFFFFF"
+                                                    android:textSize="16sp" />
+
+                                            </RelativeLayout>
+
+                                        </LinearLayout>
+
+                                    </androidx.cardview.widget.CardView>
+                                </LinearLayout>
+                            </HorizontalScrollView>
+                            <HorizontalScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:scrollbars="none">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:padding="8dp">
+
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="300dp"
+                                        android:layout_height="wrap_content"
+                                        app:cardCornerRadius="4dp"
+                                        app:cardElevation="4dp"
+                                        app:cardUseCompatPadding="true"
+                                        app:contentPadding="16dp">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="8dp"
+                                                android:orientation="horizontal"
+                                                android:weightSum="100">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="90"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:text="BMW X4 Sports"
+                                                    android:textColor="#000000"
+                                                    android:textSize="18sp"
+                                                    android:textStyle="bold" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="10"
+                                                    android:background="@drawable/roundyellow"
+                                                    android:drawableLeft="@drawable/ic_baseline_star"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:padding="6dp"
+                                                    android:text="4.5"
+                                                    android:gravity="center"
+                                                    android:textColor="#ffc32d"
+                                                    android:textSize="14sp"
+                                                    android:textStyle="bold" />
+
+                                            </LinearLayout>
+                                            <ImageView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="160dp"
+                                                android:layout_marginBottom="8dp"
+                                                android:scaleType="fitCenter"
+                                                android:src="@drawable/bmw_car_img" />
+
+                                            <RelativeLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="100">
+
+                                                <TextView
+                                                    android:id="@+id/textView"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:text="$210"
+                                                    android:textColor="#3f9dff"
+                                                    android:textSize="24sp"
+                                                    android:textStyle="bold" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignEnd="@+id/textView"
+                                                    android:layout_alignRight="@id/textView"
+                                                    android:layout_marginEnd="-48dp"
+                                                    android:layout_marginRight="-48dp"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:text="per day"
+                                                    android:textColor="#8ac3ff"
+                                                    android:textSize="14sp" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentRight="true"
+                                                    android:background="@drawable/roundedshape"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:padding="8dp"
+                                                    android:text="Book Now"
+                                                    android:textColor="#FFFFFF"
+                                                    android:textSize="16sp" />
+
+                                            </RelativeLayout>
+
+                                        </LinearLayout>
+
+                                    </androidx.cardview.widget.CardView>
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="300dp"
+                                        android:layout_height="wrap_content"
+                                        app:cardCornerRadius="4dp"
+                                        app:cardElevation="4dp"
+                                        app:cardUseCompatPadding="true"
+                                        app:contentPadding="16dp">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="8dp"
+                                                android:orientation="horizontal"
+                                                android:weightSum="100">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="90"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:text="BMW X4 Sports"
+                                                    android:textColor="#000000"
+                                                    android:textSize="18sp"
+                                                    android:textStyle="bold" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="10"
+                                                    android:background="@drawable/roundyellow"
+                                                    android:drawableLeft="@drawable/ic_baseline_star"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:padding="6dp"
+                                                    android:text="4.5"
+                                                    android:gravity="center"
+                                                    android:textColor="#ffc32d"
+                                                    android:textSize="14sp"
+                                                    android:textStyle="bold" />
+
+                                            </LinearLayout>
+                                            <ImageView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="160dp"
+                                                android:layout_marginBottom="8dp"
+                                                android:scaleType="fitCenter"
+                                                android:src="@drawable/bmw_car_img" />
+
+                                            <RelativeLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="100">
+
+                                                <TextView
+                                                    android:id="@+id/textView1"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:text="$210"
+                                                    android:textColor="#3f9dff"
+                                                    android:textSize="24sp"
+                                                    android:textStyle="bold" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignEnd="@+id/textView1"
+                                                    android:layout_alignRight="@id/textView1"
+                                                    android:layout_marginEnd="-48dp"
+                                                    android:layout_marginRight="-48dp"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:text="per day"
+                                                    android:textColor="#8ac3ff"
+                                                    android:textSize="14sp" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentRight="true"
+                                                    android:background="@drawable/roundedshape"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:padding="8dp"
+                                                    android:text="Book Now"
+                                                    android:textColor="#FFFFFF"
+                                                    android:textSize="16sp" />
+
+                                            </RelativeLayout>
+
+                                        </LinearLayout>
+
+                                    </androidx.cardview.widget.CardView>
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="300dp"
+                                        android:layout_height="wrap_content"
+                                        app:cardCornerRadius="4dp"
+                                        app:cardElevation="4dp"
+                                        app:cardUseCompatPadding="true"
+                                        app:contentPadding="16dp">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="8dp"
+                                                android:orientation="horizontal"
+                                                android:weightSum="100">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="90"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:text="BMW X4 Sports"
+                                                    android:textColor="#000000"
+                                                    android:textSize="18sp"
+                                                    android:textStyle="bold" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="10"
+                                                    android:background="@drawable/roundyellow"
+                                                    android:drawableLeft="@drawable/ic_baseline_star"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:padding="6dp"
+                                                    android:text="4.5"
+                                                    android:gravity="center"
+                                                    android:textColor="#ffc32d"
+                                                    android:textSize="14sp"
+                                                    android:textStyle="bold" />
+
+                                            </LinearLayout>
+                                            <ImageView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="160dp"
+                                                android:layout_marginBottom="8dp"
+                                                android:scaleType="fitCenter"
+                                                android:src="@drawable/bmw_car_img" />
+
+                                            <RelativeLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="100">
+
+                                                <TextView
+                                                    android:id="@+id/textView2"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:text="$210"
+                                                    android:textColor="#3f9dff"
+                                                    android:textSize="24sp"
+                                                    android:textStyle="bold" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignEnd="@+id/textView2"
+                                                    android:layout_alignRight="@id/textView2"
+                                                    android:layout_marginEnd="-48dp"
+                                                    android:layout_marginRight="-48dp"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:text="per day"
+                                                    android:textColor="#8ac3ff"
+                                                    android:textSize="14sp" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentRight="true"
+                                                    android:background="@drawable/roundedshape"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:padding="8dp"
+                                                    android:text="Book Now"
+                                                    android:textColor="#FFFFFF"
+                                                    android:textSize="16sp" />
+
+                                            </RelativeLayout>
+
+                                        </LinearLayout>
+
+                                    </androidx.cardview.widget.CardView>
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="300dp"
+                                        android:layout_height="wrap_content"
+                                        app:cardCornerRadius="4dp"
+                                        app:cardElevation="4dp"
+                                        app:cardUseCompatPadding="true"
+                                        app:contentPadding="16dp">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="8dp"
+                                                android:orientation="horizontal"
+                                                android:weightSum="100">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="90"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:text="BMW X4 Sports"
+                                                    android:textColor="#000000"
+                                                    android:textSize="18sp"
+                                                    android:textStyle="bold" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="10"
+                                                    android:background="@drawable/roundyellow"
+                                                    android:drawableLeft="@drawable/ic_baseline_star"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:padding="6dp"
+                                                    android:text="4.5"
+                                                    android:gravity="center"
+                                                    android:textColor="#ffc32d"
+                                                    android:textSize="14sp"
+                                                    android:textStyle="bold" />
+
+                                            </LinearLayout>
+                                            <ImageView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="160dp"
+                                                android:layout_marginBottom="8dp"
+                                                android:scaleType="fitCenter"
+                                                android:src="@drawable/bmw_car_img" />
+
+                                            <RelativeLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="100">
+
+                                                <TextView
+                                                    android:id="@+id/textView3"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:text="$210"
+                                                    android:textColor="#3f9dff"
+                                                    android:textSize="24sp"
+                                                    android:textStyle="bold" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignEnd="@+id/textView3"
+                                                    android:layout_alignRight="@id/textView3"
+                                                    android:layout_marginEnd="-48dp"
+                                                    android:layout_marginRight="-48dp"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:text="per day"
+                                                    android:textColor="#8ac3ff"
+                                                    android:textSize="14sp" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentRight="true"
+                                                    android:background="@drawable/roundedshape"
+                                                    android:fontFamily="sans-serif-medium"
+                                                    android:padding="8dp"
+                                                    android:text="Book Now"
+                                                    android:textColor="#FFFFFF"
+                                                    android:textSize="16sp" />
+
+                                            </RelativeLayout>
+
+                                        </LinearLayout>
+
+                                    </androidx.cardview.widget.CardView>
+                                </LinearLayout>
+                            </HorizontalScrollView>
+                        </LinearLayout>
+                    </ScrollView>
+
+        </LinearLayout>
+        <LinearLayout
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+        android:weightSum="100"
+        android:background="#FFFFFF"
+        android:layout_marginTop="0dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_baseline_home_24"
+            />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_baseline_apps"
+            />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_baseline_bookmark"
+            />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_baseline_person"
+            />
+    </LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

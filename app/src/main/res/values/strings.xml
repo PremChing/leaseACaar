@@ -1,0 +1,18 @@
+<resources>
+    <string name="leaseacaaar">LeaseACaaar</string>
+    <string name="slogan">Now take car and go where you want</string>
+    <string name="hello_there_login">Hello there, </string>
+    <string name="login_to_continue">Login to Continue </string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="new_user_sign_up">New User? Sign up</string>
+    <string name="submit">Submit</string>
+    <string name="signup_to_continue">SignUp to Continue</string>
+    <string name="email">Email</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="already_have_an_account">Already have an Account?</string>
+    <string name="prem_singh">Prem Singh</string>
+    <string name="prem_singh_17">prem_singh</string>
+
+</resources>
